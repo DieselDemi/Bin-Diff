@@ -1,0 +1,21 @@
+[package]
+name = "bin_diff_tool"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+# nuklear-rust = {version = "~0.6", features = ["rust_allocator"]}
+nuklear-rust = "0.6.3"
+nuklear-backend-gfx = "~0.9"
+gfx_device_gl = "~0.16"
+gfx_window_glutin = "~0.30"
+gfx = "~0.18"
+glutin = "~0.20"
+image = "~0.12"
+nfd = "0.0.4"
+csv = "1.1.6"
+
+[profile.release]
+debug=1
