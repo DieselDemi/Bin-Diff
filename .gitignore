@@ -1,4 +1,4 @@
 /target
-*.bin
-*.csv
-.idea
+.bin
+.csv
+/.idea
