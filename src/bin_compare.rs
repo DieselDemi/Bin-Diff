@@ -1,5 +1,4 @@
 
-///
 /// Get the position of a search array if exists.
 fn search(bin: &Vec<u8>, search_bytes: &Vec<u8>) -> usize {
     let mut ret = 0;
@@ -44,13 +43,13 @@ pub fn compare(chunk_size: usize, known_bin: &Vec<u8>, unknown_bin: &Vec<u8>) ->
     // let mut lines: Vec<HashMap<usize, Vec<u8>>> = Vec::new();
     let mut lines: Vec<(usize, Vec<u8>)> = Vec::new();
 
-    let mut line: Vec<u8> = Vec::new();
-
     let mut ret: Vec<(usize, u128)> = Vec::new();
 
     for i in 0..known_bin.len() {
         if i % 8 != 0 { continue; }
         if known_bin[i] == 0xff { continue };
+
+        let mut line: Vec<u8> = Vec::new();
 
         for j in 0..0xf {
             line.push(known_bin[i + j]);

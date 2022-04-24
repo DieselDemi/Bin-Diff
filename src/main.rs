@@ -234,7 +234,7 @@ fn main() {
 
         if bins.first_bin.loaded && bins.second_bin.loaded {
             if !bins.compared {
-                match bin_compare::compare(4,&bins.first_bin.data, &bins.second_bin.data) {
+                match bin_compare::compare(16,&bins.first_bin.data, &bins.second_bin.data) {
                     Ok(off) => {
                         offsets = off.clone();
                         for offset in off {
